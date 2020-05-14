@@ -1,0 +1,16 @@
+<div class="container my-3">
+  <h1>test test all cocktails</h1>
+  <%= link_to 'Create A Cocktail', new_cocktail_path, class: "btn btn-primary"  %>
+  <div class="d-flex">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card my-3 shadow p-3 mb-5 bg-white rounded" style="width: 32rem;">
+    <img src="https://source.unsplash.com/random" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <p class="card-text"><%= ["A delicious mix of ", "A tasty blend of ", "A refreshing combination of ", "An amazing amalgamation of ", "A wonderful whisking of ", "The perfect fusion of "].sample %>stuff.</p>
+      <%= link_to 'More Info', cocktail_path(cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>  

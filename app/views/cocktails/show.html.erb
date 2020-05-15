@@ -1,14 +1,18 @@
-<div class="container my-3">
-  <div class="card">
-    <h5 class="card-header">Featured Cocktail</h5>
-    <div class="card-body">
-      <h3 class="card-title"><%= @cocktail.name %></h3>
-      <% @cocktail.doses.each do |dose| %>
-      <p class="card-text">
-       <%= link_to 'Remove This Ingredient', dose_path(dose), method: :delete, class: "btn btn-primary", data: { confirm: "remove this ingredient?" }%>        <%= dose.ingredient.name %> - <%= dose.description %>
-      </p>
-      <% end %>  
-      <%= link_to 'Add an Ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-success my-3"  %>
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1589527146/adam-wilson-6UIonphZA5o-unsplash_vk4ts6.jpg);">
+    <div class="container">
+      <h1> <strong></strong></h1>
+      <div class="d-flex justify-content-around align-items-center">
+      <%= link_to 'Add an Ingredient to This Cocktail', new_cocktail_dose_path(@cocktail), class: "btn btn-warning my-3"  %>
+<div class="card" style="width: 18rem;">
+  <img src="@cocktail.photo.key" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @cocktail.name %></h5>
+    <p class="card-text"></p>
+    <a href="#" ></a>
+  </div>
+</div>
+    </div>
     </div>
   </div>
 <%= link_to 'See All Cocktails', cocktails_path, class: "btn btn-info my-3" %>

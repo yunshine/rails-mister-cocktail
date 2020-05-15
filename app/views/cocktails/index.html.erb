@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1589523523/kaizen-nguy-n-jcLcWL8D7AQ-unsplash_fyovga.jpg);">
   <div class="container">
-    <h1><strong>Coo Coo Cola</strong>!</h1>
+    <h1><strong>Coo Coo Cola</strong></h1>
     <p>Feel the fizz of Coo Coo Cola</p>
     <%= link_to 'Create A Cocktail', new_cocktail_path, class: "btn btn-warning"  %>
   </div>
@@ -15,7 +15,7 @@
     <% if cocktail.photo.attached? %>
       <%= cl_image_tag cocktail.photo.key, class: "card-img-top" %>
     <% else %>
-      <%= image_tag "https://source.unsplash.com/random", alt: "alttext", class: "card-img-top" %>
+      <%= image_tag "https://res.cloudinary.com/deyqjsowe/image/upload/v1589528368/adam-jaime-dmkmrNptMpw-unsplash_fng1av.jpg", alt: "alttext", class: "card-img-top" %>
     <% end %>
     <div class="card-body">
       <h5 class="card-title"><%= cocktail.name %></h5>

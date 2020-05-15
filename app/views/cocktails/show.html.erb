@@ -10,11 +10,13 @@
       <h1> <strong></strong></h1>
       <div class="d-flex justify-content-around align-items-center">
       <%= link_to 'Add an Ingredient to This Cocktail', new_cocktail_dose_path(@cocktail), class: "btn btn-warning my-3"  %>
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 24rem;">
   <%= cl_image_tag @cocktail.photo.key, class: "card-img-top" %>
   <div class="card-body">
     <h5 class="card-title"><%= @cocktail.name %></h5>
-    <p class="card-text"></p>
+    <% @cocktail.doses.each do |dose| %>
+    <h6><%= dose.description %> of <%= dose.ingredient.name %> <%#= link_to cocktail_path(cocktail), method: :delete, class: 'card-remove-link', data: { confirm: "You are deleting this ingredient. Are you sure you want to do this?" } do %></h6>
+    <% end %>
     <a href="#" ></a>
   </div>
 </div>

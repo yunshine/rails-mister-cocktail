@@ -1,10 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1589523523/kaizen-nguy-n-jcLcWL8D7AQ-unsplash_fyovga.jpg);">
+  <div class="container">
+    <h1><strong>Coo Coo Cola</strong>!</h1>
+    <p>Feel the fizz of Coo Coo Cola</p>
+    <%= link_to 'Create A Cocktail', new_cocktail_path, class: "btn btn-warning"  %>
+  </div>
+</div>
+
+
 <div class="container my-3">
-  <h1>test test all cocktails</h1>
-  <%= link_to 'Create A Cocktail', new_cocktail_path, class: "btn btn-primary"  %>
+
   <div class="d-flex">
   <% @cocktails.each do |cocktail| %>
   <div class="card my-3 shadow p-3 mb-5 bg-white rounded" style="width: 32rem;">
-    <img src="https://source.unsplash.com/random" class="card-img-top" alt="...">
+    <% if cocktail.photo.attached? %>
+      <%= cl_image_tag cocktail.photo.key, class: "card-img-top" %>
+    <% else %>
+      <%= image_tag "https://source.unsplash.com/random", alt: "alttext", class: "card-img-top" %>
+    <% end %>
     <div class="card-body">
       <h5 class="card-title"><%= cocktail.name %></h5>
       <p class="card-text"><%= ["A delicious mix of ", "A tasty blend of ", "A refreshing combination of ", "An amazing amalgamation of ", "A wonderful whisking of ", "The perfect fusion of "].sample %>stuff.</p>

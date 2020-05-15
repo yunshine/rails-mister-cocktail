@@ -1,11 +1,17 @@
 <div class="container">
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="container">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1589527146/adam-wilson-6UIonphZA5o-unsplash_vk4ts6.jpg);">
     <div class="container">
       <h1> <strong></strong></h1>
       <div class="d-flex justify-content-around align-items-center">
       <%= link_to 'Add an Ingredient to This Cocktail', new_cocktail_dose_path(@cocktail), class: "btn btn-warning my-3"  %>
 <div class="card" style="width: 18rem;">
-  <img src="@cocktail.photo.key" class="card-img-top" alt="...">
+  <%= cl_image_tag @cocktail.photo.key, class: "card-img-top" %>
   <div class="card-body">
     <h5 class="card-title"><%= @cocktail.name %></h5>
     <p class="card-text"></p>
@@ -15,5 +21,5 @@
     </div>
     </div>
   </div>
-<%= link_to 'See All Cocktails', cocktails_path, class: "btn btn-info my-3" %>
+<%= link_to 'See All Cocktails', cocktails_path, class: "btn btn-warning btn-lg btn-block my-3" %>
 </div>

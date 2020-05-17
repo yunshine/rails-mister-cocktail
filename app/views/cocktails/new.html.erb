@@ -1,14 +1,42 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-3 text-white" style="background-color: #4ecdc4;">
+  <a class="navbar-brand" href="#">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Messages</a>
+      </li>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/deyqjsowe/image/upload/v1589709320/Yun_Chung_Profile_Photo_2_rlfgi5.jpg" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <div class="container">
   <h3>Create a New Cocktail</h3>
 </div>
 
-<div class="container my-3">
+<div class="container my-3 offwhite-background p-3">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
 		  <%= simple_form_for (@cocktail) do |f| %>
 		    <%= f.input :name %>
 		    <%= f.input :photo, as: :file %>
-		    <%= f.submit class: "btn btn-primary", value: "Create This Cocktail" %>
+		    <%= f.submit class: "btn btn-warning", value: "Create This Cocktail" %>
 		  <% end %>
     </div>
   </div>

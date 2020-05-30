@@ -26,21 +26,24 @@
   </div>
 </div>
 
-<div class="container">
     <!-- <h3>Create a New Cocktail</h3> -->
-  <div class="row justify-content-center">
     <!-- <div class="card" style="width: 24rem; text-align: center">
     <div style="display: inline-block">
       <div class="card-body"> -->
-    <div class="col-sm-4">
+
+<div>
+  <div class="new-cocktail-container">
+    <div class="new-cocktail-form">
       <%= simple_form_for (@cocktail) do |f| %>
         <%= f.input :name %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit class: "btn btn-warning", value: "Create This Cocktail" %>
+        <%= f.submit class: "btn btn-warning", value: "Create klnhkjhThis Cocktail" %>
       <% end %>
+      
     </div>
   </div>
 </div>
+ 
 <!--       </div>
   </div>
 </div> -->

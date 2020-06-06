@@ -2,7 +2,7 @@
   <div class="container">
     <h1><strong>Coo Coo Cola</strong></h1>
     <p>Feel the fizz of Coo Coo Cola</p>
-    <%= link_to 'Create A Cocktail', new_cocktail_path, class: "btn btn-warning"  %>
+    <%= link_to 'Create A Cocktail', new_cocktail_path, class: "btn btn-warning rounded-button"  %>
   </div>
 </div>
 
@@ -20,7 +20,7 @@
     <div class="card-body">
       <h5 class="card-title"><%= cocktail.name %></h5>
       <p class="card-text"><%= ["A delicious mix of ", "A tasty blend of ", "A refreshing combination of ", "An amazing amalgamation of ", "A wonderful whisking of ", "The perfect fusion of "].sample %>stuff.</p>
-      <%= link_to 'More Info', cocktail_path(cocktail), class: "btn btn-info" %>
+      <%= link_to 'More Info', cocktail_path(cocktail), class: "btn btn-info rounded-button" %>
     </div>
   </div>
   <% end %>

@@ -26,6 +26,7 @@ gem 'faker'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'devise'
+gem 'pundit'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

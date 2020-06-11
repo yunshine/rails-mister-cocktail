@@ -31,6 +31,10 @@
     <div style="display: inline-block">
       <div class="card-body"> -->
 
+<% if policy(Restaurant).create? %>
+  <%= link_to "New restaurant", new_restaurant_path %>
+<% end %>
+
 <div>
   <div class="new-cocktail-container">
     <div class="new-cocktail-form">

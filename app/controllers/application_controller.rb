@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
-  skip_before_action :authenticate_user!
 
-    before_action :authenticate_user!
   include Pundit
 
   # Pundit: white-list approach.
